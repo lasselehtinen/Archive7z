@@ -384,7 +384,9 @@ class Archive7z
             '-so',
             $path,
         ], $this->decorateCmdExtract()));
-
+            
+        
+        
         return $process->mustRun()->getOutput();
     }
 
