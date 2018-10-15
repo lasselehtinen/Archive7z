@@ -385,7 +385,7 @@ class Archive7z
             $path,
         ], $this->decorateCmdExtract()));
             
-        
+        $process->setTimeout(3600);
         
         return $process->mustRun()->getOutput();
     }
