@@ -417,7 +417,10 @@ class Archive7z
             $this->filename,
             '-slt',
         ], $this->decorateCmdExtract()));
-
+        
+        // Set process timeout
+        $process->setTimeout(3600);
+        
         $this->execute($process);
 
         $out = \explode(\PHP_EOL, $process->getOutput());
